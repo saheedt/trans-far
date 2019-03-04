@@ -2,10 +2,10 @@
 
 ## Trans-far: A simple file uploader and downloader
 
-This README would normally document whatever steps are necessary to get the
+This README documents whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+Things to note:
 
 * Ruby version
  2.5.1
