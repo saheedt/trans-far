@@ -1,2 +1,29 @@
-<h1>Uploads#show</h1>
-<p>Find me in app/views/uploads/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<h1 class="page-label"><%= @upload.title %></h1>
+
+<div class="upload-container">
+  <div class="upload-description-holder">
+    <div id="label">Description: </div>
+    <div id="desc"> <%= @upload.description %> </div>
+  </div>
+  <div class="upload-files-holder">
+    <% @upload.files.each do |file| %>
+      <% if @upload.files.first == file %>
+        <p>
+          <%= link_to file.filename, file, target: :blank %>
+        </p>
+      <% else %>
+        <p class="bottom-ruling-05">
+          <%= link_to file.filename, file, target: :blank %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="btn-holder">
+    <div><%= link_to 'Back', uploads_path %></div>
+    <div>|</div>
+    <div><%= link_to 'Edit', edit_upload_path(@upload) %></div>
+  </div>
+</div>
