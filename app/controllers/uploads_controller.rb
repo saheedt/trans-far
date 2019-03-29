@@ -1,4 +1,5 @@
 class UploadsController < ApplicationController
+  before_action :set_resource, only: [:show, :edit, :update, :destroy]
   def index
     @uploads = Upload.all
   end
@@ -37,7 +38,9 @@ class UploadsController < ApplicationController
   end
 
   private
-
+  def set_resource
+    @upload = Upload.find(params[:id])
+  end
   def permitted_params
     params.require(:upload).permit(:title, :description, files: [])
   end
