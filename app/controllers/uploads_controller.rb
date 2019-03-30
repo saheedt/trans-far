@@ -1,5 +1,5 @@
 class UploadsController < ApplicationController
-  before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  before_action :set_resource, only: %i[show edit update destroy]
   def index
     @uploads = Upload.all
   end
@@ -37,6 +37,11 @@ class UploadsController < ApplicationController
   end
 
   def destroy
+    @upload.destroy
+    respond_to do |format|
+      format.html { redirect_to uploads_url, notice: 'Upload was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def edit; end
