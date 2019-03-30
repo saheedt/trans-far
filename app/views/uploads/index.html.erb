@@ -3,10 +3,10 @@
 <h1 class="page-label">Uploads</h1>
 
 <div class="uploads-list">
-<div class="upload-list-heading">
-  <div>Title</div>
-  <div>Description</div>
-</div>
+  <div class="upload-list-heading">
+    <div>Title</div>
+    <div>Description</div>
+  </div>
   <ul>
     <% @uploads.each_with_index do |upload, index| %>
       <% if index % 2 == 0%>
@@ -29,5 +29,5 @@
 
     <% end %>
   </ul>
-
+  <%= link_to material_icon.add, new_upload_path, class: 'btn-floating btn-large waves-effect waves-light material-icons add-btn' %>
 </div>

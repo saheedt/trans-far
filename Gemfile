@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass'
 # Aws s3 sdk
 gem 'aws-sdk-s3'
+# material icon
+gem 'material_icons'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
