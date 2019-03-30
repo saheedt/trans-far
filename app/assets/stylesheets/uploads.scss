@@ -122,6 +122,9 @@ show.html styles
     padding: 5px;
     p {
       margin: 0;
+      .download-link {
+        float: right;
+      }
     }
   }
   .btn-holder {

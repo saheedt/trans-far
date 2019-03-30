@@ -13,10 +13,12 @@
       <% if @upload.files.first == file %>
         <p>
           <%= link_to file.filename, file, target: :blank %>
+          <%= link_to 'Download', rails_blob_path(file, disposition: :attachment), class: 'download-link' %>
         </p>
       <% else %>
         <p class="bottom-ruling-05">
           <%= link_to file.filename, file, target: :blank %>
+          <%= link_to 'Download', rails_blob_path(file, disposition: :attachment), class: 'download-link'  %>
         </p>
       <% end %>
     <% end %>
