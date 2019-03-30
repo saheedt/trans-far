@@ -22,25 +22,31 @@ class UploadsController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   def update
+    respond_to do |format|
+      if @upload.update(permitted_params)
+        format.html { redirect_to @upload, notice: 'Upload successfully updated.' }
+        format.json { render :show, status: :ok, location: @upload }
+      else
+        format.html { render :edit }
+        format.json { render json: @upload.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
   end
 
-  def edit
-  end
-
-  def update
-  end
+  def edit; end
 
   private
+
   def set_resource
     @upload = Upload.find(params[:id])
   end
+
   def permitted_params
     params.require(:upload).permit(:title, :description, files: [])
   end
