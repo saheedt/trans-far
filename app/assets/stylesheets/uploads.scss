@@ -55,6 +55,7 @@ index.html styles
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   .upload-list-heading {
     display: flex;
     justify-content: flex-start;
@@ -151,4 +152,17 @@ general styles
 .bottom-ruling-05{
   border-top: 0.5px solid lightgray;
   width: 100%
+}
+
+#notice {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: #383d41;
+  font-weight: bold;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
